@@ -90,6 +90,9 @@ class ViewController: UIViewController {
                 }
             }
             display.text = "\(result)"
+            
+            let addToHistory = ("\(numbers[0]) " + "\(op1)" + " \(numbers[1])" + " = " + "\(result)\n")
+            history.append(addToHistory)
         }
         
     }
@@ -111,6 +114,7 @@ class ViewController: UIViewController {
             answer *= number
         }
         display.text = "\(answer)"
+        history.append("\(number) factorial = \(answer) \n")
     }
     
     //Shows history view
@@ -122,13 +126,9 @@ class ViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "HistorySegue") {
-            let DestViewController: HistoryView = segue.destinationViewController as! HistoryView
-            DestViewController.historyResults = history
-
-        }
+        let DestViewController: HistoryView = segue.destinationViewController as! HistoryView
+        DestViewController.historyResults = history
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
