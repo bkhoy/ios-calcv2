@@ -184,7 +184,7 @@
                                 </state>
                                 <connections>
                                     <action selector="DisplayHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KyX-fz-ibO"/>
-                                    <segue destination="cJD-jF-zfh" kind="presentation" id="ny0-em-nTe"/>
+                                    <segue destination="cJD-jF-zfh" kind="push" id="61e-bJ-qjL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LNz-z1-h9u">
@@ -373,7 +373,7 @@
         <!--View Controller-->
         <scene sceneID="7xi-b6-xdI">
             <objects>
-                <viewController id="cJD-jF-zfh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="History" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cJD-jF-zfh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="54Q-6r-aXD"/>
                         <viewControllerLayoutGuide type="bottom" id="nRk-u6-fld"/>
@@ -398,6 +398,12 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="jcj-WM-0sl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXv-KO-OvL">
+                                <rect key="frame" x="279" y="114" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.89019607840000003" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -411,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xye-Ws-k9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1488" y="400"/>
+            <point key="canvasLocation" x="1320" y="400"/>
         </scene>
     </scenes>
 </document>

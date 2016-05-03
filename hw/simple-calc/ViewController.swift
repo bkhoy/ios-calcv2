@@ -124,7 +124,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "HistorySegue") {
             let DestViewController: HistoryView = segue.destinationViewController as! HistoryView
-            DestViewController.historyResults = showHistory
+            DestViewController.historyResults = history
 
         }
     }

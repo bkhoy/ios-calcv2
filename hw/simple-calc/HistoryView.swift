@@ -11,12 +11,21 @@ import UIKit
 class HistoryView: UIViewController {
 
     @IBOutlet var label: UILabel!
-    var historyResults = String()
+    
+    var historyResults : [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = historyResults
+        label.text = ""
+        for i in 0...historyResults.count - 1 {
+            label.text = label.text! + historyResults[i]
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let DestViewController: ViewController = segue.destinationViewController as! ViewController
+        DestViewController.history = historyResults;
     }
     
     override func didReceiveMemoryWarning() {
